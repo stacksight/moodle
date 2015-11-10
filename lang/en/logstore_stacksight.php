@@ -15,24 +15,18 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Internal library of functions for module stacksight
+ * External stacksight log store plugin
  *
- * All the stacksight specific functions, needed to implement the module
- * logic, should go here. Never include this file from your lib.php!
- *
- * @package    mod_stacksight
- * @copyright  2015 Your Name
+ * @package    logstore_stacksight
+ * @copyright  2015 Linnovate Team
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-/*
- * Does something really useful with the passed things
- *
- * @param array $things
- * @return object
- *function stacksight_do_something_useful(array $things) {
- *    return new stdClass();
- *}
- */
+$string['appid'] = 'Application ID';
+$string['token'] = 'Your token';
+$string['settings'] = 'General Settings';
+$string['pluginname'] = 'Stacksight';
+$string['pluginadministration'] = 'Stacksight administration';
+$string['pluginname_desc'] = 'Stacksight plugin.';

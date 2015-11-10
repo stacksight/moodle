@@ -15,22 +15,17 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Defines the version and other meta-info about the plugin
+ * External stacksight log store plugin
  *
- * Setting the $plugin->version to 0 prevents the plugin from being installed.
- * See https://docs.moodle.org/dev/version.php for more info.
- *
- * @package    mod_stacksight
- * @copyright  2015 Your Name <your@email.address>
+ * @package    logstore_stacksight
+ * @copyright  2015 Linnovate Team
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'mod_stacksight';
-$plugin->version = 2015051100;
-$plugin->release = 'v0.0';
-$plugin->requires = 2014051200;
-$plugin->maturity = MATURITY_ALPHA;
-$plugin->cron = 0;
-$plugin->dependencies = array();
+$plugin->component = 'logstore_stacksight';
+$plugin->version = 2015101002;
+$plugin->release = '0.0.1';
+$plugin->requires = 2014111000;
+$plugin->maturity = MATURITY_BETA;

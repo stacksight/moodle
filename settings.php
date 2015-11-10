@@ -15,28 +15,21 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Provides code to be executed during the module installation
+ * External stacksight log store plugin
  *
- * This file replaces the legacy STATEMENTS section in db/install.xml,
- * lib.php/modulename_install() post installation hook and partially defaults.php.
- *
- * @package    mod_stacksight
- * @copyright  2015 Your Name <your@email.adress>
+ * @package    logstore_stacksight
+ * @copyright  2015 Linnovate Team
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-/**
- * Post installation procedure
- *
- * @see upgrade_plugins_modules()
- */
-function xmldb_stacksight_install() {
-}
+defined('MOODLE_INTERNAL') || die();
 
-/**
- * Post installation recovery procedure
- *
- * @see upgrade_plugins_modules()
- */
-function xmldb_stacksight_install_recovery() {
+if ($hassiteconfig) {
+    $settings->add(new admin_setting_configtext('logstore_stacksight/appid',
+        get_string('appid', 'logstore_stacksight'), '',
+        'appid', PARAM_TEXT));
+
+    $settings->add(new admin_setting_configtext('logstore_stacksight/token',
+        get_string('token', 'logstore_stacksight'), '',
+        'token', PARAM_TEXT));
 }
